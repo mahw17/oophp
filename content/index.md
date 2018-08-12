@@ -1,21 +1,21 @@
 ---
-title: "My title"
+title: "ME-sida OOPHP-v4 | Marcus Holmersson"
 ...
-Min me-sida i kursen oophp
+Om Mig Själv
 =========================
 
-[FIGURE src="image/me.jpg?w=500" caption="Bild på mig"]
+<article>
+    <header>
+        <p class="author">Uppdaterad <time datetime="2018-08-12 21:00:22">12:e augusti 2018</time> av Marcus Holmersson</p>
+    </header>
 
-Detta är min me-sida i kursen. Denna sidan innehåller en presentation av mig själv. Underhåll denna sidan under hela kursen och uppdatera den efter hand och behov.
+    <div class="justify">
+        <img src="img/me.png" class="me" alt="Bild på barnen Holmersson" />
+        <p>Här kommer lite kort information om mig, Marcus Holmersson. Jag föddes i slutet av 70-talet i ett litet samhälle strax utanför Kalmar. Efter gymnasiestudier och militärtjänstgörning
+        läste jag till civilingenjör i Maskinteknik och tog examen från Linköpings Universitet 2005. Jag var redan på den tiden intresserad av programmering men då var det mest CNC- och PLC-programmering som gällde. Sedan dess har det tyvärr inte
+        blivit så mycket programmering för egen del. Nu förtiden är det bara lite Visual Basic programmering för att utöka funktionaliteten i Excel.</p>
 
-Så, en presentation en bra början. Skriv några ord om dig själv. Jag börjar.
-
-Mitt namn är Mikael Roos. Född och uppvuxen i Bankeryd, Småland, strax utanför Jönköping, i ett villaområde som byggdes upp samtidigt som vi flyttade in där. Jag gillade landhockey och har spelat bandy och hockey samt gått bowlinggymnasiet i Nässjö. Jag har varit städare, diskare, kallskänka, servitör och kock. På ett bananskal landade jag i Ronneby när jag började högskolan 1990 där och nu är jag kvar med fru, barn och så vidare.
-
-Programmering har alltid intresserat mig sedan 13-årsåldern och min första dator var en Spectravideo 328 med bandspelare.
-
-Om jag skall nämna någon hobby, förutom webbprogrammering, så får det bli att bära sten på sommarstugetomten, och det finns sten så det räcker och blir över.
-
-Till och från får jag för mig att börja på lite hobbies, ett år satsade jag på pokerspel, ett annat år var det geocaching och sedan turfing. Nu ligger jag lågt med hobbies, men något kanske dyker upp...?
-
-Vi syns och hörs i forum och chatt!
+        <p>Jag har som sagt de senaste 13 åren jobbat med produktionsteknik i alla dess former såsom projektledare, beredningsarbete, tillverkningsanalyser etc. och märker i mitt arbete ett ökat behov av att kunna mer programmering, dels för att bli
+        en bättre beställare av denna typ av tjänster men även för att kunna göra en del mindre applikationer själv. Det är av dessa anledningar jag har hoppat på utbildningen i Webbprogrammering!</p>
+    </div>
+</article>

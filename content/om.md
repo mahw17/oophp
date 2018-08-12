@@ -1,16 +1,16 @@
 ---
 ...
-Om
+Om kursen OOPHP-v4
 =========================
 
-Denna webbplatsen är en del av kursen [XXX](https://dbwebb.se/kurser/XXX). Uppdatera så att länken går till kursens hemsida på dwebb.se.
+Denna webbplatsen är en del av kursen [OOPHP (v4)](https://dbwebb.se/kurser/oophp-v4)
 
-Några egna kloka ord om kursen?
+Kursen Objektorienterade webbteknologier, a.k.a. oophp, fokuserar på objektorienterad programmering med PHP tillsammans med databasen MySQL.
 
-En fin och representativ bild för kursen, enligt ditt egna val.
+Kursen hanterar objektorienterade programmeringstekniker i PHP med fokus mot webbprogrammering och webbutveckling av webbapplikationer och webbplatser.
 
-[FIGURE src=image/car.png?w=300 caption="En fin bil som demobild."]
+[FIGURE src=image/php.png?w=300]
 
-Länka till [dbwebb kursrepot på GitHub](https://github.com/dbwebbse/XXX).
+Länk till [dbwebb kursrepot på GitHub](https://github.com/dbwebb-se/oophp).
 
-Länka till [ditt eget repo för me/redovisa på GitHub](https://github.com/XXX/XXX).
+Länk till [mitt egna repo för me/redovisa på GitHub](https://github.com/mahw17/oophp).
