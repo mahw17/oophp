@@ -29,15 +29,15 @@ namespace Anax\View;
                     <li><a href="#">Copyrighting</a></li>
                 </ul> -->
             </li>
-            <li><a href="<?= url("lek") ?>"><span class="iconic star"></span> Lek</a>
-                <!-- <ul>
-                    <li><a href="#">Widget One</a></li>
-                    <li><a href="#">Widget Two</a></li>
-                    <li><a href="#">Web App Three</a></li>
-                    <li><a href="#">Web App Four</a></li>
+            <li><a href="#"><span class="iconic star"></span> Spel/Lek</a>
+                <ul>
+                    <li><a href="<?= url("lek") ?>">Lek</a></li>
+                    <li><a href="<?= url("gissa") ?>">Gissa</a></li>
+                    <li><a href="<?= url("dice") ?>">Tärningsspel</a></li>
+                    <!-- <li><a href="#">Web App Four</a></li>
                     <li><a href="#">Crazy Products</a></li>
-                    <li><a href="#">iPhone Apps</a></li>
-                </ul> -->
+                    <li><a href="#">iPhone Apps</a></li> --> -->
+                </ul>
             </li>
             <li><a href="<?= url("debug") ?>"><span class="iconic denied"></span> Debug</a>
                 <!-- <ul>
