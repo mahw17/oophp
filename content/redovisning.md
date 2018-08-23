@@ -63,9 +63,31 @@ hur mina kommentarer bör se ut för optimalt resultat.
 Kmom03
 -------------------------
 
-Här är redovisningstexten
+###Har du tidigare erfarenheter av att skriva kod som testar annan kod?
+I kursen OOPython-v2 var kursmoment 3 snarlikt denna veckans övning. I detta kursmoment
+introducerades även det för mig nya begreppet radtäckning.
 
+I övrigt har jag aldrig i förebyggande syfte skrivit kod för testning utan i så fall
+har det varit i felsökningssyfte.
 
+###Hur ser du på begreppen enhetstestning och att skriva testbar kod?
+Antar att jobbar man i stora projeket måste varje liten del var testad/testbar och felsäkrad.
+Känner redan att den kod jag själv skriver vill jag kapsla in och göra 'idiotsäker'. Dock blir
+det tyvärr i slutänden inte så mycket av det på grund av lathet och tidsbrist.
+
+###Förklara kort begreppen white/grey/black box testing samt positiva och negativa tester, med dina egna ord.
+Med white box menas att man har tillgång till all källkod och det borde således göra att man kan kan utföra testfall som täcker
+större delen av kodmängden. Med black box är det motsatsen, du ska testa ett gränsnitt/api och vet inte hur den bakomliggande koden ser ut. Grey tolkar jag
+som ett mellanting mellan vit och svart, du ser eventuellt inte all källkod men kanske vilka funktioner/metoder som finns tillgängliga.
+
+###Hur gick det att genomföra uppgifterna med enhetstester, använde du egna klasser som bas för din testning?
+Tycker det har gått bra. Började med att göra testfall för Guess-klasserna i exempelmappen. Då detta gick bra kopierade jag över
+mina egna Guess-klasser. Det svåra var inte att modifiera testfallen till att täcka mina egna klasser utan det som var lite
+småknepigt var att få igång spelet och de nya testfallen. Tog en stund innan jag förstod att det krävdes en 'make install' för att uppdatera
+autoloadern  att hitta de nya klasserna. Jag la tillslut även över min klasser från tärningsspelet som även dessa gick bra att validera.
+
+###Vilken är din TIL för detta kmom?
+Kodtäckning hade jag aldrig hört talas om innan och PHPunit skapade en fin och lättläst rapport över vilka tester som genomförts.
 
 Kmom04
 -------------------------
