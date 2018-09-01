@@ -10,11 +10,17 @@
  */
 
 $app->router->any(["GET", "POST"], "dice", function () use ($app) {
+    session_name("mahw17_dice");
+    session_start();
+
     $data = [
         "title" => "Tärningsspel",
+        "max_dices" => 6, // Maximum number of dices to choose
     ];
 
-    $_SESSION = [];
+    if (isset($_SESSION["game"])) {
+        session_destroy();
+    }
 
     $app->view->add("dice/start", $data);
     $app->page->render($data);
@@ -27,7 +33,6 @@ $app->router->any(["GET", "POST"], "dice", function () use ($app) {
  */
 
 $app->router->any(["GET", "POST"], "dice/game", function () use ($app) {
-
     session_name("mahw17_dice");
     session_start();
 
@@ -35,14 +40,15 @@ $app->router->any(["GET", "POST"], "dice/game", function () use ($app) {
         "title" => "Tärningsspel",
     ];
 
-    // Reset the game
-    if (isset($_POST["reset"])) {
-        $_SESSION = [];
-    }
 
     // Start new game if none alreade initated
     if (!isset($_SESSION["game"])) {
-        $_SESSION["game"] = new \Mahw17\Dice\Game();
+        // Get incoming
+        $player = $_POST["player"] ?? "Spelare 1";
+        $dices = $_POST["dices"] ?? 3;
+        $_SESSION["game"] = new \Mahw17\Dice\Game($player, $dices);
+        // $app->view->add("dice/test");
+        // $app->page->render($data);
     }
 
     // New roll

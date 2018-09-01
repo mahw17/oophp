@@ -31,3 +31,15 @@
 .dice-sprite.dice-4 { background-position: -64px 0; }
 .dice-sprite.dice-5 { background-position: -32px 0; }
 .dice-sprite.dice-6 { background-position: 0 0; }
+
+.form-dice {
+    display: inline-grid;
+}
+
+.form-dice input {
+    margin-bottom: 10px;
+}
+
+.form-dice select {
+    margin-bottom: 15px;
+}

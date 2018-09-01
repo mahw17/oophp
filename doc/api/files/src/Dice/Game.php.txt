@@ -26,6 +26,8 @@ class Game
     public $class;
     public $computerScore;
     public $currentPlayer;
+    public $dices;
+    public $player;
     public $playerScore;
     public $res;
     public $score;
@@ -37,11 +39,13 @@ class Game
      * Constructor to create a new Game.
      * @return void
      */
-    public function __construct()
+    public function __construct($player, $dices)
     {
-        $this->currentPlayer = "Spelare 1";
+        $this->currentPlayer = $player;
+        $this->dices = $dices;
         $this->res = [];
         $this->class = [];
+        $this->player = $player;
         $this->playerScore = 0;
         $this->computerScore = 0;
         $this->totalScore = 0;
@@ -62,8 +66,8 @@ class Game
         $this->btnNext = false;
 
 
-        $dice = new DiceGraphic();
-        $rolls = 3; // Number of dices
+        $dice = new DiceHistogram2();
+        $rolls = $this->dices; // Number of dices
         $res = [];
         $class = [];
         for ($i = 0; $i < $rolls; $i++) {
@@ -73,11 +77,11 @@ class Game
         }
 
         if (in_array(1, $res)) {
-            $this->text = $this->currentPlayer == "Spelare 1" ? "Tyvärr, du slog en etta!" : "Datorn slog en etta!";
+            $this->text = $this->currentPlayer == $this->player ? "Tyvärr, du slog en etta!" : "Datorn slog en etta!";
             $this->btnNext = true;
             $this->score = 0;
         } else {
-            if ($this->currentPlayer == "Spelare 1") {
+            if ($this->currentPlayer == $this->player) {
                 $this->text = "Jippie, vill du fortsätta eller stanna??!";
                 $this->btnRoll = true;
             } else {
@@ -99,13 +103,13 @@ class Game
      */
     public function saveScore()
     {
-        if ($this->currentPlayer == "Spelare 1") {
+        if ($this->currentPlayer == $this->player) {
             $this->playerScore = $this->totalScore + $this->score;
             $this->currentPlayer = "Datorn";
             $this->totalScore = $this->computerScore;
         } else {
             $this->computerScore = $this->totalScore + $this->score;
-            $this->currentPlayer = "Spelare 1";
+            $this->currentPlayer = $this->player;
             $this->totalScore = $this->playerScore;
         }
 

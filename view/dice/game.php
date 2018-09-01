@@ -8,7 +8,7 @@ namespace Anax\View;
 
 ?><h1><?=$title?></h1>
 
-<form action="#" method="post">
+<form action="<?= url("dice") ?>" method="post">
       <input type="submit" name="reset" value="Reset"></input>
 </form>
 
@@ -29,12 +29,16 @@ namespace Anax\View;
 
 <hr>
 
-<form action="#" method="post">
-    <?php if ($btnRoll) : ?>
+<form action="<?= url("dice/game") ?>" method="post">
+    <?php if ($btnRoll && $player != "Datorn") : ?>
     <input type="submit" name="roll" value="Kasta tärningar"></input>
     <?php endif; ?>
 
-    <?php if ($score > 0 && $btnNext == false) : ?>
+    <?php if ($btnRoll && $player == "Datorn") : ?>
+    <input type="submit" name="roll" value="Låt datorn kastar"></input>
+    <?php endif; ?>
+
+    <?php if ($score > 0 && $btnNext == false && $player != "Datorn") : ?>
     <input type="submit" name="save" value="Stanna"></input>
     <?php endif; ?>
 
@@ -52,6 +56,7 @@ namespace Anax\View;
 
 <?php if (array_sum($res) > 0) : ?>
 <p>Sum is: <?= array_sum($res) ?>.</p>
+<pre><?= $histo ?></pre>
 <?php endif; ?>
 
 <h3><?= $text ?></h3>

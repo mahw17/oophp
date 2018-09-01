@@ -92,8 +92,33 @@ Kodtäckning hade jag aldrig hört talas om innan och PHPunit skapade en fin och
 Kmom04
 -------------------------
 
-Här är redovisningstexten
+###Vilka är dina tankar och funderingar kring trait och interface?
+Jag tolkar trait som en klass som ej 'klarar' sig själv, det vill säga att den är beroende av
+att något annat. Detta något annat förtydligas med ett interface. Interfacet kräver att den som vill
+använda trait:et även implementerar för trait:et nödvändinga metoder.
 
+###Hur gick det att skapa intelligensen och taktiken till tärningsspelet, hur gjorde du?
+Det gick bra att skapa i alla fall till en viss nivå lite intelligens hos datorn. Det som gjorde mig lite obekväm
+var att min Game-klass börjar innehålla metoder som blir väldigt specialiserade och att klassen blir mer och mer
+unik och svår att återvinna i andra applikationer.
+
+Logiken/intelligensen skapade jag genom att först kontrollera poängdifferensen mellan spelaren och datorn.
+Baserat på differensen blev datorn mer eller mindre riskbenägen, detta klassificerades i 7 steg mellan 0 - 85%.
+Därefter beräknades sannolikheten för att nästa hand skulle innehålla slaget ett. Jag gjorde förenklingen
+att varje tärning slogs för sig och efter varandra och beräknade således sannolikheten enligt (1-5/6^(antal tärningslag)) x 100.
+
+Om sannolikheten för att nästkommande tärningshand skulle innehålla en etta är mindre än datorns riskbenägenhet väljer datorn att fortsätta.
+
+###Några reflektioner från att integrera hårdare in i ramverkets klasser och struktur?
+Tycker jag i princip hållt mig på samma nivå som i kursmoment 2 där vi integrerade 'Guess'-spelet. Så inget speciellt nytt
+förutom att vi använt oss utav ramverkets variant av GET, POST och SESSION.
+
+###Berätta hur väl du lyckades med make test inuti ramverket och hur väl du lyckades att testa din kod med enhetstester och vilken kodtäckning du fick.
+Jag lyckades få igång enhetstestningen i ramverket och fokuserade på testen till min Game-klass som innehåller Tärningsspelet. En kodtäckning på 93.65% anser jag vara okej
+då det är lite trixit att få till samtliga fall av riskbenägenhet.
+
+###Vilken är din TIL för detta kmom?
+Trait och Interface hade jag innan detta kursmoment aldrig tidigare hört talas om.
 
 
 Kmom05

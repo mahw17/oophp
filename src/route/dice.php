@@ -9,12 +9,19 @@
  * Dice game start view.
  */
 
-$app->router->any(["GET", "POST"], "dice", function () use ($app) {
+$app->router->get("dice", function () use ($app) {
+    session_name("mahw17_dice");
+    session_start();
+
     $data = [
         "title" => "Tärningsspel",
+        "max_dices" => 6, // Maximum number of dices to choose
     ];
 
-    $_SESSION = [];
+    // Destroy current session if exists
+    if (isset($_SESSION["game"])) {
+        session_destroy();
+    }
 
     $app->view->add("dice/start", $data);
     $app->page->render($data);
@@ -26,8 +33,7 @@ $app->router->any(["GET", "POST"], "dice", function () use ($app) {
  * Dice game 'ongoing' view.
  */
 
-$app->router->any(["GET", "POST"], "dice/game", function () use ($app) {
-
+$app->router->post("dice/game", function () use ($app) {
     session_name("mahw17_dice");
     session_start();
 
@@ -35,14 +41,12 @@ $app->router->any(["GET", "POST"], "dice/game", function () use ($app) {
         "title" => "Tärningsspel",
     ];
 
-    // Reset the game
-    if (isset($_POST["reset"])) {
-        $_SESSION = [];
-    }
 
-    // Start new game if none alreade initated
+    // Start new game if none already initated
     if (!isset($_SESSION["game"])) {
-        $_SESSION["game"] = new \Mahw17\Dice\Game();
+        $player = $_POST["player"] ?? "Spelare 1";
+        $dices = $_POST["dices"] ?? 3;
+        $_SESSION["game"] = new \Mahw17\Dice\Game($player, $dices);
     }
 
     // New roll
@@ -81,6 +85,7 @@ $app->router->any(["GET", "POST"], "dice/game", function () use ($app) {
         $data["btnRoll"] = $game->btnRoll;
         $data["btnNext"] = $game->btnNext;
         $data["text"] = $game->text;
+        $data["histo"] = $game->histo_as_text;
 
         $app->view->add("dice/game", $data);
         $app->page->render($data);

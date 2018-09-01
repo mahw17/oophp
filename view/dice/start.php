@@ -8,7 +8,18 @@ namespace Anax\View;
 
 ?><h1>Tärningsspelet 100</h1>
 
-<form action="<?= url("dice/game") ?>">
+<form class="form-dice" action="<?= url("dice/game") ?>" method="post">
+
+    <label>Spelarens namn</label>
+    <input type="text" name="player"></input>
+
+    <label>Antal tärningar</label>
+    <select name="dices">
+        <?php for ($i=1; $i <= $max_dices; $i++) : ?>
+            <option value=<?= $i ?>><?= $i ?></option>
+        <?php endfor; ?>
+    </select>
+
     <input type="submit" value="Starta spel" />
 </form>
 
@@ -31,6 +42,9 @@ namespace Anax\View;
     <ul>
         <li>Enbart en spelare som möter datorn.</li>
         <li>Spelaren börjar alltid.</li>
-        <li>3 tärningar används vid varje kast.</li>
-        <li>Datorn kastar bara en gång innan den stannar.</li>
+        <li>Antalet tärningar (1-6st) kan ej ändras under en startad spelomgång.</li>
+        <li>Datorn baserar sitt beslut om hen skall fortsätta kasta eller stanna
+            baserat dels på hur stor differens det är mellan spelarna samt sannolikheten att slå en etta.
+            Sannolikheten beräknas som om det vor en tärning åt gången som slås enligt formeln (1 - (5/6)^antal slagna tärningar) x 100.
+        Datorn blir mer riskbenägen ju mer den ligger under.</li>
     </ul>

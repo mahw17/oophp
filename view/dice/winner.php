@@ -8,6 +8,6 @@ namespace Anax\View;
 
 ?><h1>Grattis <?=$winner?>!</h1>
 
-<form action="<?= url("dice/game") ?>">
+<form action="<?= url("dice/game") ?>" method="post">
     <input type="submit" value="Spela igen" />
 </form>

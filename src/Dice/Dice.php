@@ -13,7 +13,7 @@ class Dice
      */
 
     private $number;
-    private $sides;
+    protected $sides;
 
     /**
      * Constructor to create a Dice.
