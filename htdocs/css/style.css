@@ -69,6 +69,7 @@ body {
     color: #ddd;
 }
 
+
 /* Imported style https://www.webdesignerdepot.com/2012/08/create-a-stunning-menu-in-css3/
 -------------------------------------------------------------------- */
 
@@ -209,6 +210,15 @@ nav {
 
 .justify {
     text-align: justify;
+}
+
+/**
+ * Movie database
+ */
+
+img.thumb {
+    max-width: 100px;
+    max-height: 100px;
 }
 
 /**

@@ -124,8 +124,21 @@ Trait och Interface hade jag innan detta kursmoment aldrig tidigare hört talas 
 Kmom05
 -------------------------
 
-Här är redovisningstexten
+###Några reflektioner kring koden i övningen för PHP PDO och MySQL?
+Själva SQL-scripten (setup, ddl och de olika statements) känns igen från Databas-kursen som gick i våras. Så där behövde jag inte lägga så mycket
+krut för att hänga med. Sedan ska jag väl villigt erkänna att jag inte la allt för mycket kraft för att grotta mig ner i PDO-metoderna som användes i den fristående
+functions-modulen. På det stora hela gick övningen bra, fick en bra förståelse för upplägget som jag hade stor nytta av till redovisningsuppgiften.
 
+###Hur gick det att överföra koden in i ramverket, stötte du på några utmaningar?
+På det stora hela gick det bra. Den största förändringen jag gjorde var att alla CRUD-anrop togs emot via samma route (movies/crud). Istället för som i övningen skickades man vidare
+till en edit-route. Jag hade problem med header redirect tillsammans med get-variabler så jag valde att bara skicka variablerna till samma route och sedan rendera olika vyer därifrån.
+
+###Berätta om din slutprodukt för filmdatabasen, gjorde du endast basfunktionaliteten eller lade du till extra features och hur tänkte du till kring användarvänligheten och din kodstruktur?
+Än sålänge har jag enbart utfört basfunktionaliteten som angavs i kravspecifikation. Eventuellt kommer jag ge mig på kursmomentet än en gång och komplettera med någon/några extrauppgifter.
+Själva kodstrukturen följer ju i mångt och mycket det upplägg som kom med ramverket tycker jag.
+
+###Vilken är din TIL för detta kmom?
+Det var väl inget direkt denna veckan som jag inte hade hört talas om innan.
 
 
 Kmom06
