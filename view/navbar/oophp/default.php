@@ -22,21 +22,12 @@ namespace Anax\View;
                 </ul> -->
             </li>
             <li><a href="<?= url("om") ?>"><span class=""></span> Om</a>
-                <!-- <ul>
-                    <li><a href="#">Web Design</a></li>
-                    <li><a href="#">App Development</a></li>
-                    <li><a href="#">Email Campaigns</a></li>
-                    <li><a href="#">Copyrighting</a></li>
-                </ul> -->
             </li>
             <li><a href="#"><span class=""></span> Spel/Lek</a>
                 <ul>
                     <li><a href="<?= url("lek") ?>">Lek</a></li>
                     <li><a href="<?= url("gissa") ?>">Gissa</a></li>
                     <li><a href="<?= url("dice") ?>">Tärningsspel</a></li>
-                    <!-- <li><a href="#">Web App Four</a></li>
-                    <li><a href="#">Crazy Products</a></li>
-                    <li><a href="#">iPhone Apps</a></li> --> -->
                 </ul>
             </li>
             <li><a href="#"><span class=""></span> Movie</a>
@@ -45,16 +36,25 @@ namespace Anax\View;
                     <li><a href="<?= url("movie/search-title") ?>">Search title</a></li>
                     <li><a href="<?= url("movie/search-year") ?>">Search year</a></li>
                     <li><a href="<?= url("movie/crud") ?>">CRUD</a></li>
-                    <!-- <li><a href="#">Web App Four</a></li>
-                    <li><a href="#">Crazy Products</a></li>
-                    <li><a href="#">iPhone Apps</a></li> --> -->
+                </ul>
+            </li>
+            <li><a href="#"><span class=""></span> TextFilter</a>
+                <ul>
+                    <li><a href="<?= url("textfilter?filter=bbcode") ?>">BBCode</a></li>
+                    <li><a href="<?= url("textfilter?filter=clickable") ?>">Clickable</a></li>
+                    <li><a href="<?= url("textfilter?filter=markdown") ?>">Markdown</a></li>
+                </ul>
+            </li>
+            <li><a href="#"><span class=""></span> CMS</a>
+                <ul>
+                    <li><a href="<?= url("cms/show-all") ?>">Show all content</a></li>
+                    <li><a href="<?= url("cms/admin") ?>">Admin</a></li>
+                    <li><a href="<?= url("cms/create") ?>">Create</a></li>
+                    <li><a href="<?= url("cms/pages") ?>">View pages</a></li>
+                    <li><a href="<?= url("cms/blog") ?>">View blog</a></li>
                 </ul>
             </li>
             <li><a href="<?= url("debug") ?>"><span class=""></span> Debug</a>
-                <!-- <ul>
-                    <li><a href="#">Contact Us</a></li>
-                    <li><a href="#">Directions</a></li>
-                </ul> -->
             </li>
         </ul>
         <div class="clearfix"></div>

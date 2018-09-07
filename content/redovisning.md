@@ -144,9 +144,23 @@ Det var väl inget direkt denna veckan som jag inte hade hört talas om innan.
 Kmom06
 -------------------------
 
-Här är redovisningstexten
+###Hur gick det att jobba med klassen för filtrering och formatting av texten?
+Att skapa klassen i övningsmappen gick bra, däremot strulade det lite när jag skulle integrera
+den i Anax. Efter lite felsökande förstod jag att Anax redan hade en befintlig klass med samma
+namn. Men efter att listat utt det gick även integreringen smärtfritt.
 
+###Berätta om din klasstruktur och kodstruktur för din lösning av webbsidor med innehåll i databasen.
+Än så länge har jag i princip bara integrerat samtliga sidor från övningsuppgiften till ramverket, kopplat på
+textfiltreringen samt gjort de små felkontrollerna som angavs i kravspecifikationen. Så ledes inga nya klasser
+för cms:n.
 
+###Hur känner du rent allmänt för den koden du skrivit i din me/redovisa, vad är bra och mindre bra? Ser du potential till refactoring av din kod och/eller behov av stöd från ramverket?
+Både och faktiskt, dels skulle jag vilja snygga till cms-routen och dela upp den i lämpligt antal klasser. Jag skulle också tillexempel använda den textfiltreringsklassen som finns
+tillgänglig via Anax. Jag har heller inte använt den inbyggda funktionalliteten för att ta emot GET och POST!
+
+###Vilken är din TIL för detta kmom?
+Textfiltrering är ett nytt område för mig och hjälpte mig i den parallella kursen ' Individuellt programvaruprojekt' där jag nu förstår bättre hur jag ska transportera
+data från ett system till ett annat via xml.
 
 Kmom07-10
 -------------------------

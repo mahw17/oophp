@@ -32,7 +32,7 @@ class Page implements /* PageRenderInterface, */ InjectionAwareInterface
         // Add static assets
         $data["favicon"] = "favicon.ico";
         $data["stylesheets"] = ["css/style.css", "css/iconic.css", "css/dice.css", "css/table.css"];
-        $data["javascripts"] = ["js/main.js"];
+        $data["javascripts"] = ["js/main.js", "https://use.fontawesome.com/e5579368c4.js"];
 
         // Add views for common header, navbar and footer
         // Removed header Marcus Holmersson 2018-08-12

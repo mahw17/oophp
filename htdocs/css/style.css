@@ -69,6 +69,9 @@ body {
     color: #ddd;
 }
 
+.inner-wrap-navbar {
+    max-width: 750px;
+}
 
 /* Imported style https://www.webdesignerdepot.com/2012/08/create-a-stunning-menu-in-css3/
 -------------------------------------------------------------------- */
